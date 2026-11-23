@@ -6,6 +6,8 @@ O kit foi criado pelo Expert Bruno Lima com os prompts, templates, checklists e 
 
 **Copie → adapte → teste → confira → melhore**
 
+Esta é uma cópia adaptada para a rotina de estudos e desenvolvimento. Os atalhos criados e o registro da tarefa delegada estão na seção [Minha Entrega](#minha-entrega).
+
 ## Como Fazer o Desafio
 
 Você não precisa instalar nada nem saber programar. Tudo acontece no navegador.
@@ -48,40 +50,108 @@ Você não precisa instalar nada nem saber programar. Tudo acontece no navegador
 
 ## Minha Entrega
 
-Na sua cópia, abra este README, clique no lápis (**Edit this file**) e role até aqui. Troque cada frase em itálico pelo que você fez e cole o texto dentro dos blocos já prontos. Para pôr um print, é só colar a imagem com Ctrl+V. No fim, clique em **Commit changes**.
-
-Nada de e-mail, nome de cliente, dado da empresa, senha ou informação pessoal nos textos e nos prints.
+Tarefa real executada na semana de 23 a 29/11/2026. A IA preparou o material e eu decidi o que entrou na semana. Nenhum texto ou imagem desta seção mostra e-mail, dado de cliente, informação de empresa, senha ou chave de acesso.
 
 ### Minha Tarefa Real
 
-_Qual tarefa da sua semana você escolheu e por que ela vale a pena?_
+Escolhi organizar meus estudos e tarefas da semana. Essa tarefa se repete todo começo de semana e eu sempre perdia tempo decidindo o que estudar e em que ordem. Vale a pena porque transforma horas disponíveis num plano com objetivo, prática e verificação, e porque cria um registro que posso conferir na quarta-feira. O combinado com a IA foi simples: ela prepara o plano, eu aprovo. Ela não enviou mensagem, não criou evento e não alterou compromisso.
 
 ### Meus Atalhos
 
-_Conte quais modelos do kit você adaptou, o que ficou fixo e o que muda a cada uso._
+Adaptei dois modelos do kit e testei cada um em uma situação real:
+
+1. [Planejador Semanal de Estudos](01-prompts/06-planejador-semanal-de-estudos.md), a partir de [Bom Pedido](02-templates/01-bom-prompt.md) e [Preparar uma Reunião](01-prompts/05-preparar-reuniao.md). Fica fixo: a ordem contexto → instrução → objetivo → formato → limites, a tabela de cinco colunas, a separação entre fatos e sugestões e o pedido de plano antes da execução. Muda a cada uso: semana, horas totais, blocos e horários, trilha de estudo, dia do checkpoint e resultado esperado.
+2. [Resumo e Revisão de Aula](01-prompts/07-resumo-e-revisao-de-aula.md), a partir de [Escrever e Melhorar Textos](01-prompts/01-escrever-e-melhorar-textos.md) e [Pesquisar um Assunto](01-prompts/03-pesquisar-um-assunto.md). Fica fixo: as quatro seções (fatos com origem, interpretações da IA, incertezas e perguntas de revisão) e a regra de não inventar. Muda a cada uso: tema, material, tempo de revisão e limite de linhas.
+
+O atalho que mais usei virou a [Skill Planejador de Estudos](04-skills/03-skill-planejador-de-estudos.md), com objetivo, regras, procedimento, verificações, exceções e formato de saída.
+
+Primeiro atalho, pronto para copiar:
 
 ```text
-Cole aqui o seu primeiro atalho, já adaptado.
+CONTEXTO
+Sou estudante de desenvolvimento e estou organizando a semana de {{semana}}.
+Tenho {{horas_totais}} disponíveis em {{quantidade_blocos}} blocos: {{dias_e_horarios}}.
+Foco atual: {{trilha_de_estudo}}.
+Já adaptei meus prompts e checklists e quero equilibrar teoria, prática e revisão.
+
+INSTRUÇÃO
+Monte um plano com um bloco por dia. Para cada bloco, entregue: objetivo, atividade prática e forma de verificação. Inclua um checkpoint em {{dia_do_checkpoint}} para revisar o bloco anterior e decidir o que manter ou ajustar no próximo. Separe "Fatos recebidos" de "Sugestões sujeitas à aprovação".
+
+OBJETIVO
+Terminar a semana com {{resultado_esperado}} e com um registro do que foi conferido.
+
+FORMATO
+Tabela com colunas: dia | horas | objetivo | atividade prática | verificação. Depois da tabela: checkpoint, lista "Depende da minha aprovação" e conferência final.
+
+LIMITES
+Não invente temas, prazos ou ferramentas que eu não informei. Use "a definir pelo estudante" quando faltar dado. Não envie mensagens, não crie eventos, não altere compromissos e não acesse contas externas sem minha aprovação.
+
+Antes de executar, mostre como pretende fazer a tarefa e espere minha aprovação.
 ```
 
+Segundo atalho, pronto para copiar:
+
 ```text
-Cole aqui o seu segundo atalho, já adaptado.
+CONTEXTO
+Estou estudando {{tema}} e tenho como fonte {{material_disponivel}}.
+
+INSTRUÇÃO
+Resuma o material e transforme-o em revisão. Separe:
+1. Fatos que estão no material, com o trecho de origem;
+2. Interpretações e exemplos criados por você;
+3. Pontos que não foi possível confirmar no material;
+4. Três perguntas de revisão e uma atividade prática curta.
+
+OBJETIVO
+Conseguir revisar {{tema}} em {{tempo_de_revisao}} e identificar o que ainda preciso pesquisar.
+
+FORMATO
+Tópicos curtos, até {{limite_de_linhas}} linhas, com as quatro seções acima e um título por seção.
+
+LIMITES
+Não invente conteúdo que não esteja no material. Se precisar de informação externa, diga o que verificou e apresente a fonte. Não escreva como se fosse eu: preserve minhas palavras quando eu fornecer um trecho. A decisão final sobre o que estudar é minha.
 ```
 
 ### Minha Delegação
 
+Pedido entregue à IA com os cinco elementos do [template de delegação](02-templates/03-delegacao.md). O texto integral também está em [delegacao-enviada.md](registros/delegacao-enviada.md).
+
 ```text
-Cole aqui o pedido que você entregou à IA, com objetivo, contexto, recursos, limites e sucesso.
+OBJETIVO
+Montar o plano de estudos e organização de tarefas da semana de 23 a 29 de novembro de 2026 para um estudante de desenvolvimento que cursa o bootcamp DIO, com foco em IA aplicada, e entregar o plano conferido para minha aprovação.
+
+CONTEXTO
+Sou estudante e desenvolvedor em formação. Tenho 6 horas disponíveis nesta semana, em 3 blocos de 2 horas: segunda, quarta e sexta. Já adaptei meus prompts e checklists; falta transformar isso numa rotina semanal equilibrada entre teoria, prática e revisão, com um checkpoint na quarta-feira.
+
+RECURSOS
+Somente as informações fornecidas nesta delegação: os 3 blocos de estudo, o foco em IA aplicada e o objetivo de organizar estudos e tarefas. Não há outros documentos, links ou credenciais disponíveis.
+
+LIMITES
+Não invente conteúdos, prazos, ferramentas ou dados que não estejam aqui. Não envie mensagens, não altere compromissos, não crie eventos, não acesse contas externas e não tome decisões por mim. Separe claramente o que é informação recebida (fato) do que é sugestão sua.
+
+SUCESSO
+O plano final deve caber em exatamente 6 horas, distribuídas nos 3 blocos informados, com objetivo, atividade prática e forma de verificação para cada bloco; incluir um checkpoint na quarta; separar fatos de sugestões; e listar o que depende da minha aprovação antes de qualquer ação.
+
+Antes de começar, mostre como pretende realizar essa tarefa. Não execute sem eu aprovar o plano.
 ```
 
 ### O Plano da IA
 
-_Cole o print do plano e conte o que você ajustou antes de a IA começar._
+A IA respondeu primeiro com um plano de trabalho em seis etapas: registrar os fatos, separar fatos de sugestões, preparar o rascunho somente após aprovação, listar as dependências de aprovação, conferir o resultado e entregar para decisão. Antes de autorizar a execução, ajustei dois pontos: o checkpoint de quarta passou a revisar explicitamente o bloco de segunda e a decidir o que manter ou ajustar na sexta; a entrega passou a ser uma tabela com dia, horas, objetivo, atividade prática e verificação, mantendo "a definir pelo estudante" onde o tema do bootcamp não foi informado. Só depois disso pedi a execução.
+
+![Plano recebido da IA antes da execução](registros/plano-da-ia.png)
+
+O texto integral do plano e dos ajustes está em [plano-da-ia.md](registros/plano-da-ia.md).
 
 ### O Resultado
 
-_Cole o print do resultado e conte como você conferiu antes de usar._
+A IA entregou três blocos de 2 horas, um na segunda, um na quarta e um na sexta, com objetivo, atividade prática e verificação em cada um, mais o checkpoint na quarta e a lista do que dependia de mim. Conferi antes de usar: 2h + 2h + 2h = 6h; datas e blocos corretos; checkpoint sem mensagem, evento ou compromisso; fatos e sugestões em seções separadas; nenhum tema, prazo ou ferramenta inventado; os campos sem informação mantidos como "a definir pelo estudante". A decisão de manter ou ajustar na sexta ficou comigo. O registro completo da conferência está em [03-registro-de-delegacao.md](05-delegacao-e-automacao/03-registro-de-delegacao.md).
+
+![Resultado entregue pela IA e conferido](registros/resultado-da-ia.png)
+
+O texto integral do resultado está em [resultado-da-ia.md](registros/resultado-da-ia.md).
 
 ### Como Foi para Você
 
-_Conte em poucas linhas o que mudou no seu dia a dia._
+A semana passou a começar com um plano em vez de uma lista solta de intenções. Pedir o plano antes da execução foi o que mais mudou: eu consegui corrigir o formato e o checkpoint antes de a IA produzir o resultado. Separar fatos de sugestões evitou que eu tratasse uma proposta da IA como informação do bootcamp. O plano ficou como rascunho conferido, e a decisão final sobre os temas ainda é minha.
+
